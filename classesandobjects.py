@@ -29,8 +29,15 @@ print(S2.regnum)
 S1.display()
 S2.display()
 
+#below example explains a different method of changing values for objects in a class:
 
+class fruit:
+    def __init__(self, col):
+        self.colour = col
+        
+apple = fruit("red")
+orange = fruit("orange")
+kiwi = fruit("green")
+papaya = fruit("yellow")
 
-
-
-
+print(apple.colour, orange.colour, kiwi.colour, papaya.colour, end = "")
