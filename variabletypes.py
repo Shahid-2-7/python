@@ -16,6 +16,8 @@ realme = phone("RealMe", "10,000")
 oppo = phone("Oppo", "7,500")
 apple = phone("Apple IPhone", "1,10,000")
 
+phone.ct = "B-Type"
+
 realme.display()
 oppo.display()
 apple.display()
