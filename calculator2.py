@@ -21,7 +21,7 @@ class calculator:
 
         print("Divison result = ", self.num1 / self.num2 )
         
-object = calculator(8,5)
+object = calculator(8,5) 
 
 object.add()
 object.sub()

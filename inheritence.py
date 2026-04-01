@@ -13,9 +13,11 @@ class motherboard(ram):
 class pc(motherboard):
     def pcsetup(self):
         print("I Have pc setup")
+#chaining 2 classes are called single inheritence.
+#chaining 3 or more classes are called multiple in heritence
+#if you chained two classes which is connected to another class you can access the command of that one too.
+#line 18 is called multi-level inheritence
 
 person = pc()
-person.asustek()
-person.ddr4()
 person.intel()
 person.pcsetup()
