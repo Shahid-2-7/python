@@ -16,7 +16,7 @@ class dog(an):
 
 class bird(an):
     def sn(self):
-        print("Birs Sings")
+        print("Birds Sings")
 
 class cat(an):
     def sn(self):
@@ -30,3 +30,6 @@ a2 = bird()
 a2.sn()
 a3 = cat()
 a3.sn()
+
+#above is an example for polymorphism
+#it overwrites the same command into a new oneas 
