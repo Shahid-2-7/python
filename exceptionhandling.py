@@ -14,10 +14,15 @@ try:
     print(a+b-c)
 
 except Exception as e:
-    print("(===>!ERROR!<===):", e)
+    print("(ERROR!:", e)
 
 finally:
-    print("user input is correct")
+    print("Done and Dusted!")
 
+#'try:' needs except and just tells the compiler to test the program
+#except is instrunction for your compiler to do if an error is thrown
+#except need to followed by 'Exception" or any other error names
+#you could modify what each errors should output instead of an normal error but the word 'Exception' just reffers to all errors in general
+#'finally:' is instructions for your compiler to do when code executes without errors or 'except Exception:' works successfully
 
 
