@@ -79,7 +79,7 @@ while(j):
                         print("Getting prepared for the next order...")
                         
                     elif process.capitalize()== "N":
-                        j = "false"
+                        j = False
                 
 
                     
@@ -145,7 +145,7 @@ while(j):
                             print("Getting prepared for the next order...")
                         
                         elif process.capitalize()== "N":
-                            j = "false"
+                            j = False
 
                         else:
                             print("Insufficient Money recieved: Missing some money")
@@ -220,13 +220,13 @@ while(j):
                             print("Getting prepared for the next order...")
                         
                         elif process.capitalize()== "N":
-                            j = "false"
+                            j = False
 
                         else:
                             print("Insufficient Money recieved: Missing some money")
                             continue
                         
-                if payment .capitalize() == "O":
+                if payment.capitalize() == "O":
                     print("One Time Code: 84937")
                     process = input("Transaction successful, want to buy another drink or stop the process?)(Y - yes, N-No)=>")
                     if process.capitalize()== "Y":
