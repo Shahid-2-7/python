@@ -42,7 +42,7 @@ def add_base(size):
         pizza_price += S_price
 
 size = input("Enter pizza size (S/M/L): ")
-add_base(size)
+add_base(size.capitalize())
 # code below
 
 # crust function
