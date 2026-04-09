@@ -3,14 +3,13 @@ milk = 0.0065
 sugar = 0.045
 hfee = 20
 
-def cofpowcmd():
+def cofpowcmd(shots):
     try:
-        cpprice = int(input("Select Shots of Coffee (1/2/3)=>"))
-        if cpprice == 1:
+        if shots == 1:
             cpprice = cofpow * 8
-        elif cpprice == 2:
+        elif shots == 2:
             cpprice = cofpow *16
-        elif cpprice == 3:
+        elif shots == 3:
             cpprice = cofpow *24
         else:
             print("Unknown input given. Coffee powder shots set to 2. Run program again to customize")
@@ -18,8 +17,9 @@ def cofpowcmd():
         return cpprice
     except Exception:
             print("Letters given instead of strings")
+            return 0
 
-def latte():
+def latte(shots):
     cupsize = input("Select Size (S - 30ml, M - 60ml, L - 90ml)=>")
     if cupsize.capitalize() == "S":
         print("size small cup is taken to serve!")
@@ -38,11 +38,11 @@ def latte():
         mprice = milk * 75       
     else:
         print("Unknown input given. Run program again for proper working of the machine")
-    cpprice = cofpowcmd()
+    cpprice = cofpowcmd(shots)
     tprice = cpprice + cprice + hfee + sprice + mprice
     return tprice
 
-def cappuccino():
+def cappuccino(shots):
     cupsize = input("Select Size (S-30ml, M-60ml, L-90ml)=>")
     if cupsize.capitalize() == "S":
         print("size small cup is taken to serve!")
@@ -61,11 +61,11 @@ def cappuccino():
         sprice = 0.23 * 3    
     else:
         print("Try Again")
-    cpprice = cofpowcmd()
+    cpprice = cofpowcmd(shots)
     tprice = cpprice + mprice + cprice + hfee + sprice
     return tprice
     
-def espresso():
+def espresso(shots):
     cupsize = input("Select Size (S-30ml, M-60ml, L-90ml)=>")
     if cupsize.capitalize() == "S":
         print("size small cup is taken to serve!")
@@ -84,32 +84,27 @@ def espresso():
         sprice = 0.36         
     else:
         print("Unknown input given. Run program again for proper working of the machine")
-    cpprice = cofpowcmd()
+    cpprice = cofpowcmd(shots)
     tprice = cpprice + wprice + cprice + hfee + sprice
     return tprice
 
 j = True 
 while j:
     coffeetype = input("What would you like to have to today?(E-Espresso C-Cappuccino L-Latte)")
+    shots = int(input("Select Shots of Coffee (1/2/3)=>"))
+
     if coffeetype.capitalize() == "E":
-        cofpowcmd()
-        espresso()
-        tprice = espresso()
+        tprice = espresso(shots)
         print(f"Total {tprice}.")
-        j = False
-        
+
     elif coffeetype.capitalize() == "C":
-        cofpowcmd()
-        cappuccino()
-        tprice = cappuccino()
+        tprice = cappuccino(shots)
         print(f"Total {tprice}.")
+
     elif coffeetype.capitalize() == "L":
-        cofpowcmd()
-        latte()
-        tprice = latte()
+        tprice = latte(shots)
         print(f"Total {tprice}.")
-    else:
-        continue
+    
 
 
     
