@@ -19,7 +19,7 @@ def pizza_size(size):
     elif size == "L":
         prices["pizza_price"] += prices["l"]
     else:
-        pass
+        pass #print (invalid input) and retry
 def toppings(topping):
     if topping == "P":
         prices["pizza_price"] += prices["pepperoni"]
@@ -30,14 +30,14 @@ def toppings(topping):
     elif topping == "M":
         prices["pizza_price"] += prices["mushroom"]
     else:
-        pass
+        pass #print (invalid input) and retry
 while True:
     size = input("select pizza size =>")
     if size.capitalize() == "S" or size.capitalize() == "M" or size.capitalize() == "L":
         pizza_size(size.capitalize())
     else:
         print("Try again")
-        continue
+        continue #function la if else irunthaa pothum dont use it here (just call the function the validations are done inside the function not here)
     while True:
         topping = input("select topping (P-Pepperoni, C-Chicken, B-Beef, M-Mushroom) =>")
         if topping.capitalize() == "P" or topping.capitalize() == "C" or topping.capitalize() == "B" or topping.capitalize() == "M":
