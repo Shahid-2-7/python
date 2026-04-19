@@ -3,12 +3,28 @@ milk = 0.0065
 sugar = 0.045
 hfee = 20
 
+def cofpowcmd():
+    cpprice = int(input("Select Shots of Coffee (1/2/3)=>"))
+    if cpprice == 1:
+        cpprice = cofpow * 8
+
+    elif cpprice == 2:
+        cpprice = cofpow *16
+
+    elif cpprice == 3:
+        cpprice = cofpow *24
+    
+    else:
+        print("Unknown input given. Coffee powder shots set to 2. Run program again to customize")
+        cpprice = cofpow *16
+
+
 j = True
 
 while(j):
 
     try:
-        coffeetype = input("What would you like to have today? (L - Latte, C - Cappuccino, E - Espresso)=> ")
+        coffeetype = input("What would you like to have today? (L - Latte, C - Cappuccino, E - Espresso)=>")
 
         if coffeetype.capitalize() == "L":
             
@@ -276,4 +292,3 @@ while(j):
            
     except Exception as e:
         print("ERROR:", e)
-
