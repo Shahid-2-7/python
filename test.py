@@ -1,10 +1,21 @@
-age = 19
-height = 145
+def func(*args): # '*' makes a variable store multiple values as a tuple
+    print(*args) #Unpack the tuple
 
-if height > 150:
-    if age > 18:
-        print("u are allowed!")
-    else:
-        print("u are underage")
-else:
-    print("Not allowed! under height")
+func(1,2,3,4,5,6,7,8,9,10)
+
+def func2():
+    yield 1 #pauses the program and resumes when we ask to do so
+    yield 2
+    yield 3
+
+a = func2()
+print(next(a))
+print(next(a))
+print(next(a))
+
+def func3():
+    return 123
+
+print(func3())
+        
+
