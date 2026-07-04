@@ -48,17 +48,12 @@ def findCharacters(sentence):
     charactercount = 0
 
     for ch in sentence:
-        print(ch)
+        
         if ch == characterfind:
             charactercount += 1
 
     print(characterfind, "Occured", charactercount, "times.")
 
-#sentence()
-
-#WORD_find()
-
-#char_count()
 userSentence = sentence_logic()
 
 while True:
